@@ -3,7 +3,7 @@ import requests
 from time import sleep
 from bs4 import BeautifulSoup
 import streamlit as st
-
+from get_data import show_intraday_chart
 BASE_URL = "https://dps.psx.com.pk"
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 DOWNLOAD_DIR = "contents"
@@ -116,6 +116,9 @@ def main():
             rel_path = os.path.join(DOWNLOAD_DIR, entry["filename"])
             st.markdown(f"[📥 Open PDF]({rel_path})")
 
+            
+    st.markdown("### 📊 Intraday Data from Database")
+    show_intraday_chart(symbol)
 
 if __name__ == "__main__":
     main()
