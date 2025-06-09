@@ -2,7 +2,7 @@
 
 set -e
 
-pip install numpy pandas streamlit requests beautifulsoup4 pymongo matplotlib pytesseract pdf2image pillow opencv-python
+pip install -r requirements.txt
 
 python3 fetch_data.py
 
