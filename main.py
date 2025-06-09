@@ -55,6 +55,7 @@ def parse_and_download_pdfs(html):
                 if pdf_res.status_code == 200:
                     with open(local_path, "wb") as f:
                         f.write(pdf_res.content)
+                        
                     print(f"✅ Downloaded: {filename}")
                 else:
                     print(f"❌ Failed to download: {full_url}")
@@ -73,7 +74,7 @@ def parse_and_download_pdfs(html):
             "local_path": local_path,
             "meta": td_texts,
         })
-
+    print(pdfs)
     return pdfs
 
 
