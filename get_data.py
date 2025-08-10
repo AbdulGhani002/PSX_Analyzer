@@ -12,7 +12,7 @@ def load_intraday_data(symbol):
         for row in doc.get("data", []):
             try:
                 timestamp_unix, price, volume = row
-                dt = datetime.utcfromtimestamp(timestamp_unix)  # ← Fix: Convert UNIX time
+                dt = datetime.utcfromtimestamp(timestamp_unix)
                 all_data.append({
                     "timestamp": dt,
                     "price": price,
