@@ -16,6 +16,8 @@ Then to start this project, following command should be run:
 ```bash
 ./install.sh
 ```
+
+I am currently working on OCR to extract data from pdf files. Then will store it in database and filter meaningful information and train model on that data!!!
 ---
 
 If you want to give any suggesstion you can email me at **itsaghani@gmail.com**
